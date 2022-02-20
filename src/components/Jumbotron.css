@@ -1,0 +1,21 @@
+.carousel {
+    width:900px;
+    height:500px;
+    margin: auto;
+  }
+.head{
+    color: white;
+    background-color: #161c2d;
+    padding: 30px 800px 50px 200px;
+    text-align: left;
+}
+#welcome{
+    color: #C8F2EF;
+}
+.head h1{
+    font-weight: 900;
+    color: white;
+}
+.head p{
+    font-size: 20px;
+}

@@ -1,0 +1,38 @@
+.content2 h1{
+    color: black;
+    font-weight: 900;
+
+}
+.content3{
+    background-color: black;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    text-align: center;
+    color: white;
+}
+.content2{
+    background-color: #C8F2EF;
+    text-align: center;
+    padding: 100px 200px 30px 200px;
+}
+
+.content1{
+    padding: 100px 150px 120px 150px;
+    margin-bottom: 100px;
+}
+.value{
+    font-weight: lighter;
+}
+
+.title{
+    color: black;
+    font-weight: 100;
+    font-size: 28px;
+}
+.btn{
+    font-size: 15px;
+
+}
+.btn:hover{
+    background-color: azure;
+}
