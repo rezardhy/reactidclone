@@ -15,19 +15,7 @@ const Kelas = [
     {
         nama:"Kelas React Fundamental ",
         isi: " This is a longer card with supporting text below as a naturalead-in to additional content. This content is a little bit longer."
-    },
-    {
-        nama:"Kelas React Expert 1",
-        isi: " This is a longer card with supporting text below as a naturalead-in to additional content. This content is a little bit longer."
-    },
-    {
-        nama:"Kelas React Expert 2",
-        isi: " This is a longer card with supporting text below as a naturalead-in to additional content. This content is a little bit longer."
-    },
-    {
-        nama:"Kelas React Expert 3",
-        isi: " This is a longer card with supporting text below as a naturalead-in to additional content. This content is a little bit longer."
-    },
+    }
 ]
 
 
