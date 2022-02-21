@@ -3,16 +3,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.css'
-import Nav from './components/navbarEdit';
-import Jum from './components/Jumbotron'
+import NavBar from './components/Molecule/NavBar';
+import Jumbotron from './components/Molecule/Jumbotron'
 import Content from './components/Content'
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <Nav/>  
-    <Jum/>
-    <Content/>
+    <NavBar />  
+    <Jumbotron />
+    <Content />
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -28,7 +28,6 @@ const Kelas = [
         nama:"Kelas React Expert 3",
         isi: " This is a longer card with supporting text below as a naturalead-in to additional content. This content is a little bit longer."
     },
- 
 ]
 
 

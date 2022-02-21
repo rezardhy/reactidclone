@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-import {  Nav, Navbar,Container} from 'react-bootstrap';
-import logo from '../logo.svg';
-import './navbarEdit.css'
+import { Nav, Navbar, Container } from 'react-bootstrap';
+import logo from '../../../logo.svg';
+import './index.css'
 
-
-
-class navbarEdit extends Component {
+class NavBar extends Component {
     state = {  } 
     render() { 
         return (
@@ -18,13 +16,9 @@ class navbarEdit extends Component {
               <Nav.Link href="#pricing">FAQ</Nav.Link>
             </Nav>
             </Container>
-
           </Navbar>
-
-        )
-    
-        ;
+        );
     }
 }
  
-export default navbarEdit;
+export default NavBar;
