@@ -22,7 +22,7 @@ function Cards(props){
                             </Card>
                     </Col>
                 ))}
-            </Row>
+        </Row>
     );
 }
 export default Cards;

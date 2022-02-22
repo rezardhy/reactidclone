@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './Content.css'
-import Card from './Molecule/card';
-import Shirt from '../kaos.png'
-import Header1 from './Atom/h1';
-import Paragraph from './Atom/Paragraph';
-import Footer from './Molecule/Footer';
+import Card from '../Molecule/card';
+import Shirt from '../../kaos.png'
+import Header1 from '../Atom/h1';
+import Paragraph from '../Atom/Paragraph';
+import Footer from '../Molecule/Footer';
 import { Container, Row, Col, Button} from 'react-bootstrap';
 
 
@@ -17,7 +17,7 @@ function Content(props){
                 <Container>
                 <Row>
                     <Col sm={7}>
-                       <img src={Shirt} alt="" />
+                       <img src={Shirt} alt="" className='shirt' />
                     </Col>
                     <Col sm={5}>
                        

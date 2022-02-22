@@ -5,7 +5,7 @@ import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.css'
 import NavBar from './components/Molecule/NavBar';
 import Jumbotron from './components/Molecule/Jumbotron'
-import Content from './components/Content'
+import Content from './components/Organism/Content'
 import Kelas from './DummyData';
 
 
