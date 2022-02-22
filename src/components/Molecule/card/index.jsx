@@ -5,7 +5,6 @@ import './index.css'
 
 
 function Cards(props){
-    console.log(props);
     return(
         <Row xs={1} md={3} className='g-4'>
                 {props.children.map((item, idx) => (

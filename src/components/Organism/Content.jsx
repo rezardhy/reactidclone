@@ -6,9 +6,19 @@ import Header1 from '../Atom/h1';
 import Paragraph from '../Atom/Paragraph';
 import Footer from '../Molecule/Footer';
 import { Container, Row, Col, Button} from 'react-bootstrap';
+import { useState, useEffect } from 'react';
 
 
 function Content(props){
+
+    const [valueCard, setValueCard] = useState([{}]);
+
+    useEffect (()=>{
+        setValueCard(props.children)
+    },[])
+  
+
+
     return (
 
         <div className='wrap'>
@@ -43,7 +53,7 @@ function Content(props){
                     Beberapa konsep React memang terlihat janggal, tapi diluar itu React sangat mudah untuk dipelajari dan dipahami, 
                     baik mereka yang sudah mahir dalam JavaScript modern ataupun yang baru saja memulai. Cobalah memulai dari salah satu materi di bawah.
                 </Paragraph>
-                <Card>{props.children}</Card>
+                <Card>{valueCard}</Card>
                
                 
             </div>
@@ -58,6 +68,5 @@ function Content(props){
 
     );
 }
-//console.log(Kelas);
  
 export default Content;

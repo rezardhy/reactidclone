@@ -6,12 +6,13 @@ import 'bootstrap/dist/css/bootstrap.css'
 import NavBar from './components/Molecule/NavBar';
 import Jumbotron from './components/Molecule/Jumbotron'
 import Content from './components/Organism/Content'
-import Kelas from './DummyData';
+import Kelas from './service/card';
+import navValue from './service/navbar';
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <NavBar />  
+    <NavBar value={navValue} />  
     <Jumbotron />
     <Content>{Kelas}</Content>
   </React.StrictMode>,
