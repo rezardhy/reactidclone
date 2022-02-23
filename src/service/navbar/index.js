@@ -2,6 +2,7 @@ const navValue=[
     {
         title:"Komunitas",
         link: "https://reactjs.id/community"
+        
     },
     {
         title:"Ajukan Topik",
@@ -13,4 +14,16 @@ const navValue=[
     }
 ];
 
-export default navValue;
+const navLogin=[
+    
+{
+    title:"Login",
+    link: "/login"
+},
+{
+    title:"register",
+    link: "register"
+}
+];
+export {navValue, navLogin};
+

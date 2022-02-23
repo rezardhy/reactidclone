@@ -1,0 +1,13 @@
+.content{
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+
+}
+
+.content h1{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+

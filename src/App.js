@@ -1,13 +1,16 @@
-import logo from './logo.svg';
+import Jumbotron from './components/Molecule/Jumbotron'
+import Content from './components/Organism/Content'
+import Kelas from './service/card';
 import './App.css';
-import { Carousel, Nav, Navbar,Container} from 'react-bootstrap';
-import navbarEdit from './components/navbarEdit'
+import { Link } from "react-router-dom";
 
 
 function App() {
   return (
     <div className="App">
 
+      <Jumbotron />
+      <Content>{Kelas}</Content>
 
     </div>
   );

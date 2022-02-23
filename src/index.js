@@ -3,18 +3,19 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.css'
+
 import NavBar from './components/Molecule/NavBar';
-import Jumbotron from './components/Molecule/Jumbotron'
-import Content from './components/Organism/Content'
-import Kelas from './service/card';
-import navValue from './service/navbar';
+import {navValue, navLogin} from './service/navbar';
+import Routing from "./route/";
+import App from './App';
+
+
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <NavBar value={navValue} />  
-    <Jumbotron />
-    <Content>{Kelas}</Content>
+    <NavBar navLeft={navValue} navRight = {navLogin}/>  
+    <Routing/>
   </React.StrictMode>,
   document.getElementById('root')
 );
