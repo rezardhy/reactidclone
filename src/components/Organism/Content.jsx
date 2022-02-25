@@ -10,13 +10,11 @@ import { useState, useEffect } from 'react';
 
 
 function Content(props){
-
     const [valueCard, setValueCard] = useState([{}]);
 
     useEffect (()=>{
         setValueCard(props.children)
     },[])
-  
 
 
     return (

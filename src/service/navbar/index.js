@@ -12,6 +12,11 @@ const navValue=[
         title:"FAQ",
         link: "https://reactjs.id/faq"
     }
+    ,
+    {
+        title:"Api",
+        link: "/getapi"
+    }
 ];
 
 const navLogin=[

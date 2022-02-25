@@ -7,7 +7,6 @@ import 'bootstrap/dist/css/bootstrap.css'
 import NavBar from './components/Molecule/NavBar';
 import {navValue, navLogin} from './service/navbar';
 import Routing from "./route/";
-import App from './App';
 
 
 

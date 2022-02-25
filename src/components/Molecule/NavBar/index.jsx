@@ -3,7 +3,6 @@ import { Nav, Navbar, Container } from 'react-bootstrap';
 import logo from '../../../logo.svg';
 import './index.css'
 import { useState, useEffect } from 'react';
-import { Link } from "react-router-dom";
 
 function NavBar(props){
 
