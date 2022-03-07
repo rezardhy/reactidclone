@@ -2,7 +2,7 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { Container, Row, Col, Button} from 'react-bootstrap';
-import{planets} from '../actions';
+import{planets} from '../../actions';
 import {useDispatch, useSelector} from 'react-redux';
 
 const TestingAxios=()=>{
