@@ -5,3 +5,17 @@ export const planets = (planet)=>{
     }
 }
 
+
+export const nextPage = (url)=>{
+    return{
+        type:'NEXT',
+        payload:url
+    }
+}
+
+export const previousPage = (url)=>{
+    return{
+        type:'PREVIOUS',
+        payload:url
+    }
+}
