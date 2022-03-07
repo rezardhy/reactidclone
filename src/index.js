@@ -8,13 +8,21 @@ import NavBar from './components/Molecule/NavBar';
 import {navValue, navLogin} from './service/navbar';
 import Routing from "./route/";
 
+import {createStore} from 'redux';
+import allReducers from './service/reducers';
 
+import { Provider } from 'react-redux';
+
+const store = createStore(allReducers,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 
 ReactDOM.render(
   <React.StrictMode>
     <NavBar navLeft={navValue} navRight = {navLogin}/>  
-    <Routing/>
+    <Provider store={store}>
+      <Routing/>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

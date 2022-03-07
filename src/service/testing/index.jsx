@@ -2,21 +2,28 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { Container, Row, Col, Button} from 'react-bootstrap';
+import{planets} from '../actions';
+import {useDispatch, useSelector} from 'react-redux';
+
+const TestingAxios=()=>{
 
 
-const TestingAxios=(url="https://swapi.dev/api/planets")=>{
-
-
+  let abc = useSelector(state=>state.data)
+  const dispatch = useDispatch(); 
+  let url="https://swapi.dev/api/planets";
   const service = ()=>{
     axios.get(url)
         .then(res => {
           setValue(res.data.results);
           setValueNext(res.data.next);
           setValuePrev(res.data.previous);
+          dispatch(planets(res.data.results));//input data ke redux
         }).catch(e=>{
         })
   
   }
+
+  console.log(abc)
 
     const [valueNext, setValueNext] = useState('');
     const [valuePrev, setValuePrev] = useState('');
@@ -53,6 +60,7 @@ const TestingAxios=(url="https://swapi.dev/api/planets")=>{
                 service()
 
             }}>Next</Button>
+
             </Col>
         </Row>
       
