@@ -7,8 +7,6 @@ import {useDispatch, useSelector} from 'react-redux';
 
 const TestingAxios=(url="https://swapi.dev/api/planets" )=>{
 
-
-  //let abc = useSelector(state=>state.data)
   const dispatch = useDispatch(); 
   //let url="https://swapi.dev/api/planets";
   const service = ()=>{
