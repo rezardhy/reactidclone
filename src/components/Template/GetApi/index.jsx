@@ -5,7 +5,10 @@ import { Container, Row, Col, Button} from 'react-bootstrap';
 
 function GetApi() {
 
-    let value = TestingAxios();
+    let [value, valueNext, valuePrev] = TestingAxios();
+    console.log(valueNext);
+    console.log(valuePrev);
+    console.log(value);
 
     return (
       <div className='content'> 

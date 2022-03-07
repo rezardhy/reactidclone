@@ -23,7 +23,6 @@ const TestingAxios=()=>{
   
   }
 
-  console.log(abc)
 
     const [valueNext, setValueNext] = useState('');
     const [valuePrev, setValuePrev] = useState('');
@@ -37,7 +36,7 @@ const TestingAxios=()=>{
 
 
     
-    return value;
+    return [value, valueNext, valuePrev];
 
 
 }
