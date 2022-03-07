@@ -37,39 +37,42 @@ const TestingAxios=()=>{
 
 
     
-    return (
-      <div className='content'> 
-        <Container>
-        <Row>
-            <Col sm={3}>
-              <Button className="btn" onClick={()=>{
-                  url=valuePrev;
-                  service()
-
-              }}>Prev</Button>
-            </Col>
-            <Col sm={6}>
-              
-            <ol>{ value.map((item,i) => <li key={i} className="list">{item.name}</li>)}</ol>
-                  
-                
-            </Col>
-            <Col sm={3}>
-            <Button className="btn" onClick={()=>{
-                url=valueNext;
-                service()
-
-            }}>Next</Button>
-
-            </Col>
-        </Row>
-      
-        </Container>
-    </div>
-    );
+    return value;
 
 
 }
 
 
 export default TestingAxios;
+
+
+// return (
+//   <div className='content'> 
+//     <Container>
+//     <Row>
+//         <Col sm={3}>
+//           <Button className="btn" onClick={()=>{
+//               url=valuePrev;
+//               service()
+
+//           }}>Prev</Button>
+//         </Col>
+//         <Col sm={6}>
+          
+//         <ol>{ value.map((item,i) => <li key={i} className="list">{item.name}</li>)}</ol>
+              
+            
+//         </Col>
+//         <Col sm={3}>
+//         <Button className="btn" onClick={()=>{
+//             url=valueNext;
+//             service()
+
+//         }}>Next</Button>
+
+//         </Col>
+//     </Row>
+  
+//     </Container>
+// </div>
+// );
