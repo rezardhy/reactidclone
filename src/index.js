@@ -9,7 +9,8 @@ import {navValue, navLogin} from './service/navbar';
 import Routing from "./route/";
 
 import {createStore} from 'redux';
-import allReducers from './service/reducers';
+import allReducers from './reducers';
+
 
 import { Provider } from 'react-redux';
 

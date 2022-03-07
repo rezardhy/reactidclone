@@ -1,3 +1,5 @@
+import TestingAxios from "../service/testing"
+
 export const planets = (planet)=>{
     return{
         type:'PLANETS',
@@ -9,13 +11,13 @@ export const planets = (planet)=>{
 export const nextPage = (url)=>{
     return{
         type:'NEXT',
-        payload:url
+        payload:TestingAxios(url)
     }
 }
 
 export const previousPage = (url)=>{
     return{
         type:'PREVIOUS',
-        payload:url
+        payload:TestingAxios(url)
     }
 }
