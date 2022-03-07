@@ -8,7 +8,7 @@ import { useState,useEffect } from "react";
 function GetApi() {
 
     let [value, valueNext, valuePrev] = TestingAxios();
-
+ 
 
     let planets = useSelector(state=>state.data);
     let dispatch = useDispatch()
@@ -35,12 +35,13 @@ function GetApi() {
                     
                 </Col>
                 <Col sm={3}>
-                    <Button className="btn" onClick={console.log("tes")}>Next</Button>
+                    <Button className="btn" onClick={()=>{dispatch(nextPage(valueNext))}}>Next</Button>
 
                 </Col>
             </Row>
       
         </Container>
+
     </div>
     );
 }
