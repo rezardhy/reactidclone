@@ -1,30 +1,30 @@
-
 import axios from 'axios';
 import { useState, useEffect } from 'react';
-import { Container, Row, Col, Button} from 'react-bootstrap';
-import{planets} from '../../actions';
+import{planets, nextPage, previousPage, page} from '../../actions';
 import {useDispatch, useSelector} from 'react-redux';
 
 const TestingAxios=(url="https://swapi.dev/api/planets" )=>{
 
   const dispatch = useDispatch(); 
-  //let url="https://swapi.dev/api/planets";
   const service = ()=>{
     axios.get(url)
         .then(res => {
-          setValue(res.data.results);
-          setValueNext(res.data.next);
-          setValuePrev(res.data.previous);
+          // setValue(res.data.results);
+          // setValueNext(res.data.next);
+          // setValuePrev(res.data.previous);
+
+          dispatch(page(url));
+          dispatch(nextPage(res.data.next));
+          dispatch(previousPage(res.data.previous));
           dispatch(planets(res.data.results));//input data ke redux
         }).catch(e=>{
         })
   
   }
 
-
-    const [valueNext, setValueNext] = useState('');
-    const [valuePrev, setValuePrev] = useState('');
-    const [value, setValue] = useState([{}]);
+    // const [valueNext, setValueNext] = useState('');
+    // const [valuePrev, setValuePrev] = useState('');
+    // const [value, setValue] = useState([{}]);
 
 
     useEffect (()=>{
@@ -33,8 +33,11 @@ const TestingAxios=(url="https://swapi.dev/api/planets" )=>{
     },[url])
 
 
+    //service();
+
+
     
-    return [value, valueNext, valuePrev];
+   // return [value, valueNext, valuePrev];
 
 
 }

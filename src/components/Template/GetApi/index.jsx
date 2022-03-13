@@ -2,22 +2,36 @@ import TestingAxios from "../../../service/testing";
 import './index.css'
 import {useDispatch, useSelector} from 'react-redux';
 import { Container, Row, Col, Button} from 'react-bootstrap';
-import { planets, nextPage, previousPage } from "../../../actions";
-import { useState,useEffect } from "react";
+import { connect } from 'react-redux';
 
-function GetApi() {
+import { planets, nextPage, previousPage, page, getData } from "../../../actions";
+import { useState, useEffect } from "react";
 
-    let [value, valueNext, valuePrev] = TestingAxios();
+const GetApi = ()=> {
+
+
+    TestingAxios();
  
-
-    let planets = useSelector(state=>state.data);
     let dispatch = useDispatch()
-    //console.log("planets: :",planets)
 
-  
-    // console.log("value next", valueNext);
-    // console.log("value prev", valuePrev);
-    //console.log("value: ", value);
+   
+    let planetList = useSelector(state=>state.data);
+    let now = useSelector(state=>state.url);
+    let next = useSelector(state=>state.next);
+    let prev = useSelector(state=>state.prev);
+    //console.log("next: :",next)
+
+    const toNext = ()=>{
+        dispatch(page(next))
+        dispatch(previousPage(now))
+        TestingAxios(next);
+
+
+    }
+
+    const toPrev = ()=>{
+        //console.log(previousPage(valuePrev))
+     }
 
    
 
@@ -26,16 +40,17 @@ function GetApi() {
         <Container>
             <Row>
                 <Col sm={3}>
-                
+                    <Button className="btn" onClick={()=>toPrev()}>previous</Button>
+
                 </Col>
                 <Col sm={6}>
                 
-                    <ol>{ value.map((item,i) => <li key={i} className="list">{item.name}</li>)}</ol>
+                    <ol>{ planetList.map((item,i) => <li key={i} className="list">{item.name}</li>)}</ol>
                     
                     
                 </Col>
                 <Col sm={3}>
-                    <Button className="btn" onClick={()=>{dispatch(nextPage(valueNext))}}>Next</Button>
+                    <Button className="btn" onClick={()=>toNext()}>Next</Button>
 
                 </Col>
             </Row>

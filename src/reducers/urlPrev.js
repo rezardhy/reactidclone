@@ -1,10 +1,10 @@
-const urlData = (state = [] , action)=>{
+const urlPrev = (state = [] , action)=>{
     switch(action.type){
-        case 'NOW':
+        case 'PREVIOUS':
             return action.payload;
         default:    
             return state;
     }
 }
 
-export default urlData;
+export default urlPrev;

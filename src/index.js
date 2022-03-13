@@ -10,8 +10,7 @@ import Routing from "./route/";
 
 import {createStore} from 'redux';
 import allReducers from './reducers';
-
-
+import { getData } from './actions';
 import { Provider } from 'react-redux';
 
 const store = createStore(allReducers,
